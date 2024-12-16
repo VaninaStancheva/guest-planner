@@ -1,0 +1,14 @@
+<div class="guest-list">
+  <ul>
+    @for (guest of guests; track guest.id) {
+      <li>
+        <app-guest />
+      </li>
+    }
+  </ul>
+</div>
+<div class="new-guest">
+  <app-new-guest />
+</div>
+
+
