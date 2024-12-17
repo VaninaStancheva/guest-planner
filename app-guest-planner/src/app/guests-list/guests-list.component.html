@@ -2,13 +2,13 @@
   <ul>
     @for (guest of guests; track guest.id) {
       <li>
-        <app-guest />
+        <app-guest [guestName]="guest" />
       </li>
     }
   </ul>
 </div>
 <div class="new-guest">
-  <app-new-guest />
+  <app-new-guest (addName)="onAddName($event)" />
 </div>
 
 

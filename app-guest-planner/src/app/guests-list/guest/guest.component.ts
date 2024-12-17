@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import {Guest} from './guest.model';
 
 @Component({
   selector: 'app-guest',
@@ -7,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './guest.component.css'
 })
 export class GuestComponent {
-
+@Input ({required: true}) guestName!: Guest;
 }

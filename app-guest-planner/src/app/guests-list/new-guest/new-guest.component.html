@@ -1,6 +1,6 @@
-<form>
+<form (ngSubmit)="onSubmit()">
   <label>NAME</label>
-  <input name="name"/>
+  <input name="name" [(ngModel)]="enteredName" />
   <button>
     Add Guest
   </button>
