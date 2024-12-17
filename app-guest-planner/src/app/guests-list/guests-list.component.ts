@@ -14,4 +14,12 @@ import {Guest} from './guest/guest.model';
 })
 export class GuestsListComponent {
 guests: Guest[] = [];
+
+onAddName (guestName: string) {
+  const guest: Guest = {
+    id: Math.random().toString(),
+    name: guestName,
+  }
+  this.guests.push(guest);
+}
 }
