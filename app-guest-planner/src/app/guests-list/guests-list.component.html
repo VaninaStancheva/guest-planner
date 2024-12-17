@@ -7,8 +7,15 @@
     }
   </ul>
 </div>
-<div class="new-guest">
-  <app-new-guest (addName)="onAddName($event)" />
-</div>
+
+@if(isAddingGuest) {
+  <div class="new-guest">
+    <app-new-guest (close)="onCloseAddGuest()" (addName)="onAddName($event)" />
+  </div>
+}
+
+<button (click)="onStartAddGuest()">ADD GUEST</button>
+
+
 
 
