@@ -14,6 +14,15 @@ import {Guest} from './guest/guest.model';
 })
 export class GuestsListComponent {
 guests: Guest[] = [];
+isAddingGuest = false;
+
+  onStartAddGuest() {
+    this.isAddingGuest = true;
+  }
+
+  onCloseAddGuest() {
+    this.isAddingGuest = false;
+  }
 
 onAddName (guestName: string) {
   const guest: Guest = {
@@ -21,5 +30,6 @@ onAddName (guestName: string) {
     name: guestName,
   }
   this.guests.push(guest);
+  this.isAddingGuest = false;
 }
 }
